@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BestDress Privacy Policy</title>
+  <meta name="description" content="BestDress Privacy Policy — how we handle your data, photos, subscriptions, and AI features.">
+  <style>
+    :root {
+      color-scheme: light;
+      --canvas: #f7f4ef;
+      --ink: #1a1a1a;
+      --ink-soft: #5c5c5c;
+      --accent: #0e0e0f;
+      --gold: #e0c9a1;
+      --max: 42rem;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--canvas);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+    header {
+      background: var(--accent);
+      color: var(--gold);
+      padding: 2rem 1.25rem;
+    }
+    header a { color: var(--gold); }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    header p {
+      margin: 0.35rem 0 0;
+      font-size: 0.9rem;
+      color: rgba(224, 201, 161, 0.85);
+    }
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 2rem 0 0.75rem;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 1.5rem 0 0.5rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    p, li { color: var(--ink-soft); }
+    strong { color: var(--ink); }
+    a { color: var(--ink); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 0.5rem 0.65rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fff; color: var(--ink); }
+    hr {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin: 2rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p><a href="index.html">← BestDress</a></p>
+    <h1>Privacy Policy</h1>
+    <p>Effective June 29, 2026</p>
+  </header>
+  <main>
+    <p><strong>App:</strong> BestDress (iOS) · <strong>Bundle ID:</strong> <code>com.bestdress.ios</code></p>
+
+    <h2>Summary</h2>
+    <p>BestDress is a <strong>local-first</strong> wardrobe app. In the <strong>default App Store build</strong> (no cloud AI API key configured at compile time), your wardrobe photos, profile details, ratings, and occasions are stored <strong>on your device only</strong>. We do not operate a BestDress user account system, backend database, advertising network, analytics SDK, or crash-reporting SDK in the current codebase.</p>
+    <p>If a build is compiled with a cloud vision API key (<code>BESTDRESS_AI_KEY</code>), photos you choose to analyze may be transmitted to that configured provider for AI processing, as described below.</p>
+
+    <h2>1. Information we process</h2>
+
+    <h3>1.1 Information you provide</h3>
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Examples</th><th>Default build</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Profile</td><td>First name, style direction, preferences, goals</td><td>On device</td></tr>
+        <tr><td>Sizing (optional)</td><td>Height, weight, waist, chest, inseam, clothing sizes</td><td>On device</td></tr>
+        <tr><td>Wardrobe</td><td>Item details and photos</td><td>On device</td></tr>
+        <tr><td>Outfit ratings</td><td>Photos, occasion, dress code, notes, results</td><td>On device</td></tr>
+        <tr><td>Occasions</td><td>Name, dress code, theme, location (typed), notes</td><td>On device</td></tr>
+        <tr><td>Avatar</td><td>Optional profile photo</td><td>On device</td></tr>
+      </tbody>
+    </table>
+    <p>We do <strong>not</strong> collect email addresses, passwords, or phone numbers. There is no in-app login to a BestDress server.</p>
+
+    <h3>1.2 Information generated on your device</h3>
+    <ul>
+      <li><strong>Style memory</strong> — local counts and defaults to improve suggestions; never uploaded.</li>
+      <li><strong>AI scan usage counters</strong> — local quota enforcement when cloud AI is enabled; never uploaded.</li>
+      <li><strong>Subscription state</strong> — trial date and tier stored locally.</li>
+    </ul>
+
+    <h3>1.3 Subscriptions</h3>
+    <p>Release builds use <strong>Apple StoreKit</strong> for in-app purchases. Apple processes payment. BestDress stores subscription tier and trial status on your device. Manage subscriptions at <a href="https://apps.apple.com/account/subscriptions">Apple Subscriptions</a>.</p>
+
+    <h3>1.4 Photos and camera</h3>
+    <p>Camera and photo library access is requested only when you add or rate an outfit. Images are stored in the app’s private documents directory and resized on import (max width 1600 px).</p>
+
+    <h2>2. AI photo processing</h2>
+
+    <h3>2.1 Default build (no API key)</h3>
+    <p>Without <code>BESTDRESS_AI_KEY</code> at build time:</p>
+    <ul>
+      <li>Outfit rating uses an on-device mock engine that does <strong>not</strong> analyze pixels.</li>
+      <li>Closet inference uses an on-device mock based on filename, profile, and closet context.</li>
+      <li><strong>No photos are sent to BestDress or third-party AI servers.</strong></li>
+    </ul>
+
+    <h3>2.2 Optional cloud vision builds</h3>
+    <p>With <code>BESTDRESS_AI_KEY</code> configured at build time, explicit user actions may send images (base64 JPEG) and text to a configurable endpoint (default: OpenAI-compatible chat completions). Transmission is not background. On failure or quota limits, the app falls back to on-device mocks. The configured provider’s privacy policy applies to that processing.</p>
+
+    <h2>3. What we do not use</h2>
+    <p>The current codebase does not integrate Firebase, Crashlytics, AdMob, RevenueCat, packaged OpenAI/Gemini/Claude SDKs, Supabase, AWS SDKs, push notifications, third-party auth, or cross-app tracking.</p>
+
+    <h2>4. Storage and retention</h2>
+    <p>Data remains on your device until you use <strong>Erase</strong> (Me tab) or uninstall the app. We do not operate cloud backup or sync.</p>
+
+    <h2>5. Data sharing</h2>
+    <p><strong>Default build:</strong> No third-party sharing except Apple for purchases.</p>
+    <p><strong>API-key builds:</strong> Images and text sent for AI analysis go to the configured vision API provider. We do not sell personal information.</p>
+
+    <h2>6. Your rights (GDPR / CCPA)</h2>
+    <p>Use <strong>Erase</strong> or uninstall to delete local data. California residents may contact us with privacy requests. GDPR users: data is processed to provide app functionality and based on permissions and choices you make.</p>
+
+    <h2>7. Children’s privacy</h2>
+    <p>BestDress is not directed at children under 13. We do not knowingly collect children’s information. The app does not implement an age gate.</p>
+
+    <h2>8. Security</h2>
+    <p>Default data is protected by your device OS. API-key builds use HTTPS to the configured endpoint.</p>
+
+    <h2>9. International transfers</h2>
+    <p>Default builds keep data on device. API-key builds may send data to provider servers outside your country.</p>
+
+    <h2>10. Changes</h2>
+    <p>We may update this policy. The effective date above will change when we do.</p>
+
+    <h2>11. Contact</h2>
+    <p>See <a href="https://bestdress.app">https://bestdress.app</a> for contact information, or the BestDress project repository for developer distributions.</p>
+
+    <hr>
+    <p><em>Generated from a source-code audit of the BestDress repository, June 29, 2026.</em></p>
+  </main>
+  <footer>
+    <p><a href="index.html">Home</a> · © BestDress</p>
+  </footer>
+</body>
+</html>
